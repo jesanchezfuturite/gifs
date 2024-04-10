@@ -11,8 +11,14 @@ export class SidebarComponent {
 
   constructor( private giftsService: GifsService ) {}
 
-  get tags(){
+  get tags(): string[]{
     return this.giftsService.tagsHistory;
+  }
+
+  searchTag(tag: string): void{
+
+    this.giftsService.searchTag(tag);
+
   }
 
 }
